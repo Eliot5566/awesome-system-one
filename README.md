@@ -209,6 +209,7 @@ Cheaper classifiers for comparison. They do not share Jev's request shape.
 - [fastText](https://github.com/facebookresearch/fastText) - Classic non-generative text classification library. Upstream archived in 2024.
 - [GLiNER](https://github.com/urchade/GLiNER) - Lightweight zero-shot structured extraction: you name the entity types at inference time. Often the comparison point in Jev classification benches.
 - [GLiNER2](https://github.com/fastino-ai/GLiNER2) - Fastino successor to GLiNER. Schema-conditioned encoder for classification, extraction, and relations in one pass.
+- [jeffy](https://github.com/nicobrenner/jeffy) - 68 pretrained logistic-regression classifiers that run and retrain on CPU: banking77 at 94.3%, CLINC-OOS, spam, plus game-state deciders for Doom and poker. The "do you even need a decision model" baseline; pip package with a live playground. MIT.
 - [ModernBERT](https://github.com/AnswerDotAI/ModernBERT) - Modernized BERT encoder under most fast classifiers, including Laya's English checkpoint. The non-generative baseline Jev's cost and speed usually get measured against.
 - [RouteLLM](https://github.com/lm-sys/RouteLLM) - Trains and serves routers that pick which LLM should handle a query, based on cost and expected quality, rather than answering the question itself.
 - [semantic-router](https://github.com/aurelio-labs/semantic-router) - Embedding-space route layer for LLMs and agents. Chooses a path from utterance similarity without a generative call.
@@ -282,6 +283,7 @@ Cheaper classifiers for comparison. They do not share Jev's request shape.
 ### Foundations
 
 - [Agents Thinking Fast and Slow: A Talker-Reasoner Architecture](https://arxiv.org/abs/2410.08328) - Christakopoulou, Mourad & Matarić / DeepMind (2024). Splits an agent into a fast conversational Talker (System 1) and a slow planning Reasoner (System 2).
+- [Build your own decision model](https://nishtahir.com/build-your-own-decision-model/) - Nish Tahir (2026). The clearest mechanism explainer yet: constrained option tokens and a softmax over answer letters versus autoregressive JSON generation, with an interactive demo, working Qwen code, and an honest note that raw token probabilities are not calibrated confidence.
 - [Distilling System 2 into System 1](https://arxiv.org/abs/2407.06023) - Yu, Xu, Weston & Kulikov / Meta (2024). Compiles intermediate-thought techniques into single-pass outputs; the research framing closest to what Jev is.
 - [Dual-processing accounts of reasoning, judgment, and social cognition](https://pubmed.ncbi.nlm.nih.gov/18154502/) - Evans (2008). Review of dual-process theories. System 1 is a family of accounts, not one algorithm.
 - [Judgment under Uncertainty: Heuristics and Biases](https://www.science.org/doi/10.1126/science.185.4157.1124) - Tversky & Kahneman (1974). Heuristic judgment under uncertainty.

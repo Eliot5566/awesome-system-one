@@ -46,6 +46,7 @@ Hosted or open. State in, typed answers out.
 - [Solar Decide](https://console.upstage.ai/api/systemone) - Upstage's structured decision model on Solar Mini 4 (beta). Same `/v1/systemone` schema as Jev, calibrated probability per answer, and a 512K context — a whole document can be the state. `choice` is limited to 26 single-token letter options. On OpenRouter, with a low-latency Flash variant.
 - [Span-01](https://openrouter.ai/respan/span-01) - Respan's behavioral-monitoring decision model: describe a behavior (user frustration, tool misuse) and get present / absent / not-observable probabilities on a conversation. A free Lite tier exists for high-volume monitoring. Vendor-run benchmarks put it ahead of Jev overall but behind GPT-6 Sol per-domain.
 - [SPX-CD](https://surd.ai) - SurdAI's hosted decision system (Flash and Pro tiers): a router/cascade on the `/v1/systemone` shape rather than a single model. Flash ranks #7 on JevBench's hosted board.
+- [SubQ Snap](https://subq.ai) - Subquadratic's long-context decision model: multimodal input with a 384K context (versus Jev's 32K) on a proprietary subquadratic sparse-attention stack. Their runs beat Jev on long-context retrieval (Decision LCR 74 vs 48) and on 13 of 16 enterprise suites by +6.0 on average, while still trailing on When2Call. $0.05/M input, output free.
 - [wity-1](https://wity.alphanimble.com/) - Alphanimble's hosted decision model with an auto-reasoning mode. Ranks #5 on JevBench's hosted board, above Jev on the composite. Closed API.
 
 ## Open Implementations

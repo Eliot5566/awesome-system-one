@@ -1,8 +1,10 @@
-# Awesome System One [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome System One Models [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of System One decision models — Jev and open alternatives — plus the agents, tools, SDKs, and benchmarks built around them.
+A list of System One models, also called decision models: Jev from TypeSafe, the open alternatives, and the agents, tools, SDKs and benchmarks built around them.
 
-You give them some state and a set of typed questions. They give back a choice, a score, or a yes/no probability. No generated text, so nothing to parse — which makes them the fast, cheap primitive for routing, classification, verification, and agent supervision. TypeSafe named the class after Kahneman's System 1; this list is about the software. Jev was the first commercial model.
+A System One model doesn't write text. You hand it some state and a few typed questions, and it answers with a choice, a score, or a yes/no probability. There's nothing to parse, and it's fast and cheap enough to sit in front of routing, classification, verification and agent supervision. The name comes from Kahneman's System 1. Jev was the first commercial one.
+
+Prefer a web version? Visit [system-one-models.com](https://system-one-models.com) to search and sort the list, with stars and growth for each entry.
 
 ## Contents
 

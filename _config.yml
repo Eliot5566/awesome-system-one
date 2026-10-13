@@ -1,5 +1,5 @@
-title: Awesome System One
-description: Curated list of System One decision models — Jev and open alternatives — plus agents, tools, SDKs, and benchmarks.
+title: Awesome System One Models
+description: A list of System One models, also called decision models: Jev from TypeSafe, the open alternatives, and the agents, tools, SDKs and benchmarks built around them.
 theme: jekyll-theme-cayman
 plugins:
   - jekyll-seo-tag

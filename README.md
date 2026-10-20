@@ -2,13 +2,13 @@
 
 A list of System One models, a class of AI models built to make fast, structured decisions (also called decision models). Jev from TypeSafe was the first. This list covers it, the open and hosted alternatives, and the agents, tools, SDKs and benchmarks built around them.
 
-A System One model doesn't write text. You hand it some state and a few typed questions, and it answers with a choice, a score, or a yes/no probability. There's nothing to parse, and it's fast and cheap enough to sit in front of routing, classification, verification and agent supervision. The name comes from Kahneman's System 1.
+A System One model doesn't write text. You hand it some state and a few typed questions, and it answers with a choice, a score, or a yes/no probability. There's nothing to parse, and it's fast and cheap enough to sit in front of routing, classification, verification and agent supervision. A sibling class is forming next to the decision models — extraction models, which answer with typed values pulled or predicted from the input instead of choices. The name comes from Kahneman's System 1.
 
 Prefer a web version? Visit [system-one-models.com](https://system-one-models.com) to search and sort the list, with stars and growth for each entry.
 
 ## Contents
 
-- [Models](#models) - Call a hosted model. Jev for the original API, CLM or Laya for open weights.
+- [Models](#models) - Call a hosted model. Jev for the original API, CLM or Laya for open weights, Clairic for extraction.
 - [Open Implementations](#open-implementations) - Train or run one yourself.
 - [Agents](#agents) - Need it to pick the next click or tap.
 - [Tools](#tools) - Ready-made plugin or CLI.
@@ -62,6 +62,10 @@ Hosted or open. State in, typed answers out.
 - [SPX-CD](https://surd.ai) - SurdAI's hosted decision system (Flash and Pro tiers): a router/cascade on the `/v1/systemone` shape rather than a single model. Flash ranks #7 on JevBench's hosted board.
 - [SubQ Snap](https://subq.ai) - Subquadratic's long-context decision model: multimodal input with a 384K context (versus Jev's 32K) on a proprietary subquadratic sparse-attention stack. Their runs beat Jev on long-context retrieval (Decision LCR 74 vs 48) and on 13 of 16 enterprise suites by +6.0 on average, while still trailing on When2Call. $0.05/M input, output free.
 - [wity-1](https://wity.alphanimble.com/) - Alphanimble's hosted decision model with an auto-reasoning mode. Ranks #5 on JevBench's hosted board, above Jev on the composite. Closed API.
+
+### Extraction models
+
+- [Clairic](https://developers.cloudflare.com/workers-ai/models/clairic/) - Cloudflare's System One extraction model — the first entrant in a sibling class to decision models, answering with typed values instead of option probabilities. One parallel pass over text and up to four images fills named fields: text spans with character offsets, computed numbers and dates, durations, lists, `estimate` distributions inside bounds you declare (median plus an 80% interval), and per-step `forecast` series. Every answer carries `confidence` and `p_null`; a field the input doesn't determine returns null rather than a plausible guess. Hosted on Workers AI at $0.10/M input, output free, 64K context; open weights promised. The [launch post](https://blog.cloudflare.com/clairic-extraction-model/) is honest about the seams — multi-step arithmetic, estimates without evidence, basic forecasting — and pairs Clairic with Clef in a claims pipeline that ran 3.2× faster than all-LLM at half the cost, where Gemma 4 and Qwen failed the extraction step outright; its 21-day TSA forecast landed 17 of 21 days inside the stated 80% interval.
 
 ## Open Implementations
 

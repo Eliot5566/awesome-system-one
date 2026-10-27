@@ -13,7 +13,7 @@ Prefer a web version? Visit [system-one-models.com](https://system-one-models.co
 - [Applications](#applications) - Agents that act, and the tools that plug a System One model into other software.
 - [SDKs & Adapters](#sdks--adapters) - Calling from application code.
 - [Baselines](#baselines) - Want a cheaper classifier first. Same job, different interface.
-- [Benchmarks](#benchmarks) - Compare models.
+- [Evaluation](#evaluation) - Compare models, evaluate your own, know the failure modes.
 - [Reading](#reading) - The psychology the name comes from.
 
 ## Models
